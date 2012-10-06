@@ -13,6 +13,14 @@ foreach ($this->container as $page) {
         continue;
     }
 
+    if ($this->moduleEnabled('BjyAuthorize'))
+    {
+        if ($page->getResource() !== null && $page->getPrivilege() !== null && !$this->isAllowed($page->getResource(), $page->getPrivilege()))
+        {
+            continue;
+        }
+    }
+
     // drop down
     $dropDown = count($page->getPages()) !== 0;
     $active = $page->isActive(true);
