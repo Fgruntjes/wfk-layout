@@ -15,4 +15,7 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'navigation' => array(
+        'default' => array(),
+    ),
 );
