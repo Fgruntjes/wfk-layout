@@ -1,17 +1,16 @@
 {
     "name": "wfk/wfk-layout",
-    "description": "Let the snc-social-auth module use doctrine orm instead of Zend Db",
-    "keywords": ["zf2", "doctrine"],
+    "description": "Module to add twitter bootstrap default layout to your application. Also some common used widgets.",
+    "keywords": ["zf2", "twitterbootstrap"],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
-        "socalnick/scn-social-auth": "1.*",
-        "zf-commons/zfc-user-doctrine-orm": "dev-master",
-        "doctrine/doctrine-orm-module": "dev-master"
+        "zendframework/zendframework": "2.*",
+        "dlu/dlutwbootstrap": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "WfkSncSocialAuthDoctrineORM": "src/"
+            "WfkLayout": "src/"
         }
     }
 }
