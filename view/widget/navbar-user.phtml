@@ -1,0 +1,18 @@
+<?php if($this->zfcUserIdentity()): ?>
+    <form class="navbar-form form-inline pull-right">
+        <a class="btn" href="<?=$this->url('zfcuser/logout');?>"><?=$this->translate('Sign Out')?></i></a>
+    </form>
+<?php else: ?>
+    <form class="navbar-form form-inline pull-right" action="<?=$this->url('zfcuser/login')?>" method="post">
+        <div class="btn-group">
+            <a class="btn" href="<?=$this->url('scn-social-auth-user/login/provider', array('provider' => 'facebook'));?>"><i class="icon-facebook"></i></a>
+            <!--<a class="btn" href="<?=$this->url('scn-social-auth-user/login/provider', array('provider' => 'google'));?>"><i class="icon-google"></i></a>-->
+        </div>
+
+        <input type="text" class="input-small" placeholder="<?=$this->translate('Email')?>">
+        <input type="password" class="input-small" placeholder="<?=$this->translate('Password')?>">
+        <button type="submit" class="btn"><?=$this->translate('Sign In')?></button>
+
+        <a class="btn" href="<?=$this->url('zfcuser/register');?>"><?=$this->translate('Register')?></a>
+    </form>
+<?php endif; ?>

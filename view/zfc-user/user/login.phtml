@@ -1,0 +1,19 @@
+<div class="span12">
+    <h1><?=$this->translate('Log In')?></h1>
+    <hr>
+    <div class="alert alert-success">
+        <?=sprintf($this->translate('Not registered? <a href="%s">Sign Up</a>.'), $this->url('zfcuser/register') . ($this->redirect ? '?redirect='.$this->redirect : ''))?> <br />
+    </div>
+    <?php
+    $form = $this->loginForm;
+    $form->prepare();
+    $form->setAttribute('action', $this->url('zfcuser/login'));
+    $form->setAttribute('method', 'post');
+
+    $form->get('submit')->setValue('Log In');
+    $form->get('identity')->setAttribute('placeholder', $form->get('identity')->getLabel());
+    $form->get('credential')->setAttribute('placeholder', $form->get('credential')->getLabel());
+
+    echo $this->formTwb($form, \DluTwBootstrap\Form\FormUtil::FORM_TYPE_HORIZONTAL);
+    ?>
+</div>

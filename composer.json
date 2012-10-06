@@ -1,0 +1,17 @@
+{
+    "name": "wfk/wfk-layout",
+    "description": "Let the snc-social-auth module use doctrine orm instead of Zend Db",
+    "keywords": ["zf2", "doctrine"],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4",
+        "socalnick/scn-social-auth": "1.*",
+        "zf-commons/zfc-user-doctrine-orm": "dev-master",
+        "doctrine/doctrine-orm-module": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "WfkSncSocialAuthDoctrineORM": "src/"
+        }
+    }
+}

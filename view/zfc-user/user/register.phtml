@@ -1,0 +1,25 @@
+<div class="span12">
+    <h1><?=$this->translate('Register')?></h1>
+    <hr>
+    <?php if(!$this->enableRegistration): ?>
+        <div class="alert alert-error">
+            <?=$this->translate('Registration is disabled')?>
+        </div>
+    <?php return; ?>
+    <?php endif; ?>
+
+    <?php
+    $form = $this->registerForm;
+    $form->prepare();
+    $form->setAttribute('action', $this->url('zfcuser/register'));
+    $form->setAttribute('method', 'post');
+
+    foreach ($form as $element)
+    {
+        $element->setAttribute('placeholder', $element->getLabel());
+    }
+    $form->get('submit')->setValue('Register');
+
+    echo $this->formTwb($form, \DluTwBootstrap\Form\FormUtil::FORM_TYPE_HORIZONTAL);
+    ?>
+</div>
