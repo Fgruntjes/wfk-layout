@@ -14,3 +14,8 @@ Installation
 From the root of your ZF2 Skeleton Application run
 
     ./composer.phar require wfk/wfk-layout
+
+Zf2 modules to enable:
+
+    1. WfkLayout
+    2. DluTwBootstrap
