@@ -4,7 +4,7 @@
     "keywords": ["zf2", "twitterbootstrap"],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.3",
         "zendframework/zendframework": "2.*",
         "dlu/dlutwbootstrap": "dev-master"
     },
