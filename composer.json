@@ -6,7 +6,7 @@
     "require": {
         "php": ">=5.3",
         "zendframework/zendframework": "2.*",
-        "dlu/dlutwbootstrap": "dev-master"
+        "dlu/dlutwbootstrap": "0.*"
     },
     "autoload": {
         "psr-0": {
